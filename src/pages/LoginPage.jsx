@@ -10,7 +10,6 @@ const LoginPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Dummy login logic (we will replace it later)
     if (email === 'admin@example.com' && password === 'admin123') {
       navigate('/admin');
     } else if (email === 'faculty@example.com' && password === 'faculty123') {

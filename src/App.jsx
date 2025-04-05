@@ -1,21 +1,19 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import LoginPage from './pages/LoginPage';
-import AdminDashboard from './pages/AdminDashboard';
-import FacultyDashboard from './pages/FacultyDashboard';
-import StudentDashboard from './pages/StudentDashboard';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import AdminDashboard from "./pages/AdminDashboard";
+import FacultyDashboard from "./pages/FacultyDashboard";
+import StudentDashboard from "./pages/StudentDashboard";
 
-const App = () => {
+function App() {
   return (
-    <div className='bg-green-500'>
-      <Routes>
+    <Routes>
       <Route path="/" element={<LoginPage />} />
-      <Route path="/admin" element={<AdminDashboard />} />
-      <Route path="/faculty" element={<FacultyDashboard />} />
-      <Route path="/student" element={<StudentDashboard />} />
+      <Route path="/admin/*" element={<AdminDashboard />} />
+      <Route path="/faculty/*" element={<FacultyDashboard />} />
+      <Route path="/student/*" element={<StudentDashboard />} />
     </Routes>
-    </div>
-  )
+  );
 }
 
-export default App
+export default App;
